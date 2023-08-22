@@ -1,1 +1,33 @@
+package org.example;
+
+public class PrimitiveTypesSandbox {
+
+    public static void main(String[] args) {
+        int number = 34;
+        byte smallNumber = (byte)number;
+        System.out.printIn(smallNumber);
+        long bigNumber = 32432423;
+        float floatNumber = 3.14574654F;
+        char symbol = 'b';
+        boolean isJavaEasy;
+        String firstName = "John DOe";
+        int sum = 23 + 567;
+        int diff = 4546 - 5857;
+        {
+            int i2 = 56;
+            i2++;
+
+        }
+        int idx = 1;
+        int remainder = 10 % 3;
+       // System.out.printLn(remainder);
+        //compar ison operators
+        boolean isNum1LTENum2 = num1 == num2;
+        System.out.printLn(isNum1LTENum2);
+        //boolean operators !, &&, ||
+        bolean alwaysTrue = true;
+        System.out.println(isNum1LTENum2 && alwaysTrue);
+
+    }
+}
 
