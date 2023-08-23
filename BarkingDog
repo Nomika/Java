@@ -1,0 +1,31 @@
+public class Main {
+    public static void main(String[] args) {
+        boolean wokenUp = true;
+
+        wokenUp = shouldWakeUp(true, 1);
+        System.out.println("Barks, 1 oclock: " + wokenUp);
+
+        wokenUp = shouldWakeUp(false, 2);
+        System.out.println("Doesnt Bark, 2 oclock: " + wokenUp);
+
+        wokenUp = shouldWakeUp(true, 8);
+        System.out.println("Barks, 8 oclock: " + wokenUp);
+
+        wokenUp = shouldWakeUp(true, -1);
+        System.out.println("Barks, -1 oclock: " + wokenUp);
+
+        //przykladAndrzeja.PoczatekPzykladuAndrzeja();
+    }
+    public static boolean shouldWakeUp(boolean barking, int hourOfDay){
+        if (hourOfDay < 0 || hourOfDay > 23) {
+            return false;
+        }
+        if (barking == true && (hourOfDay < 8 || hourOfDay > 22)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+}
