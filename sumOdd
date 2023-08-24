@@ -1,0 +1,29 @@
+package org.example;
+
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(sumOdd(2, 7));
+    }
+    public static boolean isOdd(int number) {
+        if ((number > 0) || (number % 2) == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public static int sumOdd(int start, int end) {
+        if (start <= end && start > 0 && end > 0) {
+            int suma = 0;
+            for (int number = start; number <= end; number++ ) {
+                suma = suma + number;
+            }
+            return suma;
+        }
+        else {
+            return -1;
+        }
+
+    }
+}
