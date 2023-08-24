@@ -1,0 +1,33 @@
+package org.example;
+
+public class Main {
+    public static void main(String[] args) {
+        //printEqual(1,1,1);
+        //printEqual(2,4,8);
+        //printEqual(3,9,7);
+        //printEqual(-1,0,3);
+        printEqual(0,0,0);
+
+        }
+    public static void printEqual(int par1, int par2, int par3) {
+        if (par3 < 0 || par2 < 0 || par1 < 0) {
+            System.out.println("Invalid Value");
+            return;
+        }
+        if (par3 == par2 && par2 == par1) {
+            System.out.println("All number are equal");
+            return;
+        }
+        if (par3 != par2 && par2 != par1 && par1 != par3) {
+            System.out.println("All number are different");
+            return;
+        }
+        else{
+            System.out.println("Neither all are equal or different");
+        }
+    }
+   // printEqual(1, 1, 2); should print text Neither all are equal or different
+    //printEqual(1, 1, 1); should print text All numbers are equal
+   // printEqual(-1, -1, -1); should print text Invalid Value
+    //printEqual(1, 2, 3); should print text All numbers are different
+}
