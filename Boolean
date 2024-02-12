@@ -1,0 +1,27 @@
+package org.example;
+
+public class Boolean {
+    public static void main(String[] args) {
+        boolean jeden = true;
+        boolean dwa = false;
+        boolean trzy = false;
+        boolean cztery = true;
+
+//        System.out.println(jeden && dwa);
+//        System.out.println(jeden && cztery);
+//        System.out.println(dwa && trzy);
+//        System.out.println(dwa && jeden);
+//
+//        System.out.println(jeden || dwa);
+//        System.out.println(jeden || cztery);
+//        System.out.println(dwa || trzy);
+//        System.out.println(dwa || jeden);
+
+
+        System.out.println(!jeden);
+        System.out.println(!cztery);
+        System.out.println(!(dwa || trzy));
+
+
+    }
+}
