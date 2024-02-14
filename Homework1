@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class PracaDomowa2 {
+    public static void main(String[] args) {
+        Scanner skaner = new Scanner(System.in);
+        System.out.println("ile masz lat?");
+        int lata = skaner.nextInt();
+        if(lata <=17){
+            System.out.println("Nie możemy sprzedać Ci alkoholu");
+        }
+        else {
+            System.out.println("Dziękujemy za zakupy i zapraszamy ponownie");
+        }
+    }
+}
