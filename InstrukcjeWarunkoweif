@@ -1,0 +1,15 @@
+public class InstrukcjaWarunkowaIF {
+    public static void main(String[] args) {
+        float a = 4;
+        float b = 0;
+        float a1 = 4.8f;
+        float b1 = 2.7f;
+        if (b != 0) {
+            System.out.println("Wynik dzielenia o:" + (a / b));
+            System.out.println("Wynik dzielenia o:" + (a1 / b1));
+        }
+        else {
+            System.out.println("Liczba b musi być większa od zera");
+        }
+    }
+}
