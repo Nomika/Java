@@ -1,0 +1,12 @@
+package org.example;
+
+public class LoopDoWhile {
+    public static void main(String[] args) {
+        int number = 7;
+        do {
+            System.out.println("Moja wartość to " + number);
+            number++;
+        }
+        while(number < 21);
+    }
+}
