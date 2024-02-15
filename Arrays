@@ -1,0 +1,33 @@
+package org.example;
+
+public class Arrays {
+    public static void main(String[] args) {
+        String[] zimoweMiesiace = new String[3];
+
+
+        zimoweMiesiace[0] = "grudzień";
+        zimoweMiesiace[1] = "styczeń";
+        zimoweMiesiace[2] = "luty";
+
+        System.out.println(zimoweMiesiace.length);
+        System.out.println(zimoweMiesiace[0]);
+        System.out.println(zimoweMiesiace);
+
+        int[] lotto = new int[]
+                {6,2,8,9,0};
+        System.out.println(lotto[4]);
+        System.out.println(lotto[2]);
+        System.out.println(lotto[0]);
+        System.out.println(lotto[3]);
+        System.out.println(lotto.length);
+
+        for ( int i = 0; i < zimoweMiesiace.length; i++){
+            System.out.println(zimoweMiesiace[i]);
+        }
+        
+        for ( int i = 0; i < lotto.length; i++){
+            System.out.println(lotto[i]);
+        }
+
+    }
+}
