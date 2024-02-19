@@ -1,0 +1,77 @@
+package org.example;
+
+public class StudentChecker {
+    public static void main(String[] args) {
+        Student Aga = new Student();
+        Aga.imie = "Aga";
+        Aga.nazwisko = "Kalinowska";
+        Aga.nick = "Agatas";
+        Aga.email = "aga@gmail.com";
+        Aga.numerIndeksu = 12345;
+
+        Student Kasia = new Student();
+        Kasia.imie = "Katarzyna";
+        Kasia.nazwisko = "Malinowska";
+        Kasia.nick = "Kasias";
+        Kasia.email = "kasia@gmail.com";
+        Kasia.numerIndeksu = 23456;
+
+        Student Marek = new Student();
+        Marek.imie = "Marek";
+        Marek.nazwisko = "Flisek";
+        Marek.nick = "Maras";
+        Marek.email = "marek@gmail.com";
+        Marek.numerIndeksu = 34567;
+
+        Student Karol = new Student();
+        Karol.imie = "Karol";
+        Karol.nazwisko = "Krzak";
+        Karol.nick = "Karolek";
+        Karol.email = "karol@gmail.com";
+        Karol.numerIndeksu = 56789;
+
+        Student[] students = new Student[4];
+        students[0] = Aga;
+        students[1] = Kasia;
+        students[2] = Marek;
+        students[3] = Karol;
+
+        for(int i = 0; i < 4; i++) {
+           // students[i].podajEmail();
+            students[i].PodajNrIndeksu();
+            students[i].przedstawSie();
+            students[i].ZalogujSie();
+            students[i].podajEmail();
+        }
+    }
+}
+
+
+
+
+package org.example;
+public class Student {
+    public String imie;
+    public String nazwisko;
+    public String nick;
+    public int numerIndeksu;
+    public String email;
+
+
+    public void przedstawSie() {
+        System.out.println(imie + " " + nazwisko);
+    }
+    public void ZalogujSie() {
+        System.out.println(nick + " " + numerIndeksu + " " +email);
+    }
+
+    public void PodajNrIndeksu(){
+        System.out.println("Mój nr indeksu to "+ numerIndeksu);
+    }
+    public void podajEmail(){
+        System.out.println("Mój adres email to: " + email);
+    }
+}
+
+
+
