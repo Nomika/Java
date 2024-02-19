@@ -1,0 +1,79 @@
+package org.example;
+
+public class BiuroDziekana {
+    public static void main(String[] args) {
+
+        Pracownik pracownik1 = new Pracownik();
+        pracownik1.imie = "Karolina";
+        pracownik1.nazwisko = "Trawicka";
+        pracownik1.email = "1944@wp.pl";
+        pracownik1.haslo = "Monika";
+        pracownik1.wiek = 48;
+        pracownik1.stanowisko = "kierownik";
+        pracownik1.zalogujSie1();
+        pracownik1.info();
+        pracownik1.podajStanowsiko1();
+
+    Pracownik pracownik3 = new Pracownik();
+    pracownik3.imie = "Monika";
+    pracownik3.nazwisko = "Malinowska";
+    pracownik3.email = "nomiks@oppo.pl";
+    pracownik3.haslo = "Maria";
+    pracownik3.wiek = 44;
+    pracownik3.stanowisko = "specjalista";
+        pracownik3.zalogujSie1();
+        pracownik3.info();
+        pracownik3.numerPracownika1();
+
+    Pracownik pracownik2 = new Pracownik();
+
+                pracownik2.imie = "Maja";
+                pracownik2.nazwisko = "Kowalska";
+                pracownik2.email = "erfd@opne.pl";
+                pracownik2.haslo = "Magdalena";
+                pracownik2.wiek = 32;
+                pracownik2.stanowisko = "referent";
+                pracownik2.zalogujSie1();
+                pracownik2.przedstawSie1();
+
+
+                }
+
+
+}
+
+
+
+package org.example;
+
+public class Pracownik {
+    public String imie;
+    public String nazwisko;
+    public int wiek;
+    public String stanowisko;
+    public String email;
+    public String haslo;
+    public int numerPracownika;
+    public void zalogujSie1() {
+        System.out.println(email + " " + haslo);
+    }
+    public void przedstawSie1() {
+        System.out.println(imie + " " + nazwisko);
+    }
+    public void numerPracownika1() {
+        System.out.println(numerPracownika);
+    }
+    public void podajStanowsiko1() {
+        System.out.println(stanowisko + " " + wiek);
+    }
+    public void info() {
+        System.out.println(imie);
+        System.out.println(nazwisko);
+        System.out.println(wiek);
+        System.out.println(stanowisko);
+        System.out.println(email);
+        System.out.println(haslo);
+        System.out.println(numerPracownika);
+    }
+}
+
