@@ -1,0 +1,32 @@
+public class Methods {
+ public int add(int pierwszy, int drugi, String slowo) {
+        //System.out.println("Suma to "+ pierwszy) ;
+        System.out.println(slowo);
+        System.out.println(pierwszy + " " + slowo);
+        System.out.println(drugi + " " + slowo);
+//        if(pierwszy == 0){
+//            return 0;
+//            System.out.println("Magda");
+//        }
+
+        return (pierwszy - drugi);
+
+    }
+}
+
+
+    public class MetodyTest {
+        public static void main(String[] args) {
+            Methods methods = new Methods();
+
+            System.out.println(methods.add(0,5, "Gdynia"));
+
+            System.out.println(methods.add(0,5, "Gdańsk"));
+            methods.add(0,5,  "Monika");
+            methods.add(10, 11, "Marlena");
+            int result = methods.add(5,5, "lebioza");
+            System.out.println(result);
+        }
+    }
+
+    
