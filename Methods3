@@ -1,0 +1,23 @@
+public class Methods {
+public void elastyczna(int number) {
+        System.out.println("Pokarz elastyczna " + number);
+        int result1 = 0;
+        for (int i = 0; i < number; i++) {
+            result1 = result1 + i;
+        }
+        System.out.println("Pokarz  " + result1);
+
+    }
+}
+
+ public class MetodyTest {
+        public static void main(String[] args) {
+            Methods methods = new Methods();
+           
+            methods.elastyczna(2);
+            methods.elastyczna(100);
+            methods.elastyczna(23);
+            methods.elastyczna(56);
+
+        }
+    }
