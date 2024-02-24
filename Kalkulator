@@ -1,0 +1,42 @@
+package org.example;
+
+public class Kalkulator {
+    public static void dodawanie(int liczba2, int liczba3) {
+        System.out.println(liczba2 + liczba3);
+    }
+
+    public static int dzielenie(int liczba, int liczba1) {
+        if(liczba == 0){
+            return 0;
+        }
+        return liczba/liczba1;
+    }
+
+
+    public static void odejmowanie(int liczba4, int liczba5) {
+        System.out.println(liczba4 - liczba5);
+    }
+
+    public static void modulo(int liczba6, int liczba7) {
+        System.out.println(liczba6 % liczba7);
+    }
+
+    public static void mnozenie(int liczba8, int liczba9) {
+        System.out.println(liczba8 * liczba9);
+    }
+}
+
+
+public class KalkulatorTest {
+    public static void main(String[] args) {
+        Kalkulator kalkulator = new Kalkulator();
+        Kalkulator.dodawanie(2,4);
+        Kalkulator.odejmowanie(6, 8);
+        int dzielenie = Kalkulator.dzielenie(9, 3);
+        System.out.println(dzielenie);
+        Kalkulator.modulo(8, 2);
+        Kalkulator.mnozenie(2, 3);
+
+
+    }
+}
