@@ -1,0 +1,33 @@
+public class Methods {
+    public void policzWynik() {
+        System.out.println("Zaraz policzę wynik");
+        int result = 0;
+        for (int i = 0; i < 100; i++) {
+            result = result + i;
+        }
+        System.out.println("Rezultat to " + result);
+    }
+    public int pokarzWynik() {
+        System.out.println("Pokarzę wynik");
+        int result1 = 0;
+        for (int i = 0; i < 100; i++) {
+            result1 = result1 + i;
+        }
+        System.out.println("Pokarz wynik  " + result1);
+        return result1;
+        //return 7656545;
+    }
+}
+
+
+public class MetodyTest {
+        public static void main(String[] args) {
+            Methods methods = new Methods();
+            methods.policzWynik();
+        int result = methods.pokarzWynik();
+            System.out.println("przed " + result);
+        int result2 = result *2;
+            System.out.println("po " + result2);
+        }
+
+    }
