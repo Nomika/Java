@@ -1,0 +1,50 @@
+package org.example;
+
+public class Calculator {
+    public int dodawanie(int jeden, int dwa) {
+        return jeden + dwa;
+    }
+    public int odejmowanie(int jeden, int dwa) {
+        return jeden - dwa;
+    }
+    public int mnozenie(int jeden, int dwa) {
+        return jeden * dwa;
+    }
+    public int dzielenie(int jeden, int dwa) {
+        return jeden / dwa;
+    }
+    public int modulo(int jeden, int dwa) {
+        return jeden % dwa;
+    }
+}
+
+
+package org.example;
+
+import java.util.Scanner;
+
+public class CalculatorTest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Podaj pierwszą liczbę");
+        int jeden = scanner.nextInt();
+        System.out.println("Podaj drugą liczbę");
+        int dwa = scanner.nextInt();
+
+        Calculator calculator = new Calculator();
+
+        int doda = calculator.dodawanie(jeden, dwa);
+        int odej = calculator.odejmowanie(jeden, dwa);
+        int mnozenie = calculator.mnozenie(jeden, dwa);
+        int dziel = calculator.dzielenie(jeden, dwa);
+        int modu = calculator.modulo(jeden, dwa);
+
+        System.out.println("Dodawanie " + doda);
+        System.out.println("Odejmowanie " + odej);
+        System.out.println("Mnożenie " + mnozenie);
+        System.out.println("Dzielenie " + dziel);
+        System.out.println("Modulo " + modu);
+
+    }
+}
