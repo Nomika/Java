@@ -1,0 +1,39 @@
+package org.example;
+
+    public class AutoKonstruktor {
+        public String marka;
+        public int rokProdukcji;
+        public String kolor;
+
+        public AutoKonstruktor() {
+        }
+
+        public AutoKonstruktor(String mar, int year, String color){
+           // System.out.println("Hello z konstruktora");
+            this.marka = mar;
+            this.rokProdukcji = year;
+            this.kolor = color;
+        }
+
+        public void jedz(){
+            System.out.println("Jedź!");
+        }
+
+        public void hamuj(){
+
+            System.out.println("Hamuj!");
+        }
+        public void info() {
+            System.out.println("Nie mamy takiego auta");
+            System.out.println(marka);
+            System.out.println(rokProdukcji);
+            System.out.println(kolor);
+        }
+
+    }
+
+
+
+
+
+
