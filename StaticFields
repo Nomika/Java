@@ -1,0 +1,60 @@
+package org.example;
+
+public class Student {
+    public String imie;
+    public String nazwisko;
+    public String nick;
+    public String email;
+    public int numerIndeksu;
+    public static String nazwaUczelni = "WSB Merito";
+
+    public void uczelnia() {
+        System.out.println("Nazwa uczelni: " + nazwaUczelni);
+    }
+
+    public void przedstawSie() {
+        System.out.println("Nazywam się: " + imie + " " + nazwisko);
+    }
+    public void zalogujSie() {
+        System.out.println("Podaj nick: " + nick );
+    }
+    public void podajNrIndeksu() {
+        System.out.println("Mój numer indeksu to: " + numerIndeksu);
+    }
+    public void podajEmail() {
+        System.out.println("Mój email to: " + email);
+    }
+
+}
+
+package org.example;
+
+public class StudentTest {
+    public static void main(String[] args) {
+
+    String uczelnia = Student.nazwaUczelni;
+
+    Student adam = new Student();
+    adam.imie = "Adam";
+    adam.nazwisko = "Szmajdziński";
+    adam.nick = "Adaś";
+    adam.email = "adam@wp.pl";
+    adam.numerIndeksu = 123;
+
+    String uczelniaAdama = adam.nazwaUczelni;
+
+    Student kasia = new Student();
+    kasia.imie = "Kasia";
+    kasia.nazwisko = "Koroniewska";
+    kasia.nick = "Kate";
+    kasia.email = "kasia@wp.pl";
+    kasia.numerIndeksu = 234;
+
+//    Student Mariola = new Student();
+
+
+    adam.uczelnia();
+    adam.przedstawSie();
+}
+}
+
