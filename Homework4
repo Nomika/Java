@@ -1,0 +1,58 @@
+package org.example;
+
+public class Aplikacja {
+    public String name;
+
+    public Aplikacja(String name){
+        this.name = name;
+    }
+
+    public void aplikacjaInfo(){
+        System.out.println("Aplikacja do zakupów on-line");
+    }
+
+}
+
+
+package org.example;
+
+public class AplikacjaIphone extends Aplikacja{
+
+    public AplikacjaIphone(String name) {
+        super(name);
+        System.out.println("Konstruktor Sony");
+    }
+
+    public void runAplikacjaIphone() {
+        System.out.println("Start " + name);
+    }
+}
+
+package org.example;
+
+public class AplikacjaAndroid extends Aplikacja {
+
+    public AplikacjaAndroid(String name) {
+        super(name);
+        System.out.println("Konstruktor Motorola");
+    }
+
+    public void runAplikacjaAndroid() {
+        System.out.println("Rusza Android " + name);
+    }
+}
+
+package org.example;
+
+public class AplikacjaTest {
+    public static void main(String[] args) {
+        AplikacjaIphone aplikacjaIphone = new AplikacjaIphone("Marian Sony");
+        //aplikacjaIphone.name = "SONY";
+        aplikacjaIphone.runAplikacjaIphone();
+
+        AplikacjaAndroid aplikacjaAndroid = new AplikacjaAndroid("Mańka Motorola");
+        //aplikacjaAndroid.name = "MOTOROLA";
+        aplikacjaAndroid.runAplikacjaAndroid();
+
+    }
+}
