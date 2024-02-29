@@ -1,0 +1,38 @@
+package org.example;
+
+public class NazwyMetod {
+    public void dodaj(int a, int b) {
+        System.out.println(a+b);
+    }
+    public void dodaj(int a, int b, int c ) {
+        System.out.println(a+b+c);
+    }
+    public void dodaj(int a) {
+        System.out.println(a);
+    }
+
+    public void dodaj(String a) {
+        System.out.println(a);
+    }
+
+    public void dodaj() {
+        System.out.println(2+1);
+    }
+
+
+}
+
+package org.example;
+
+public class NazwyMetodTest {
+
+    public static void main(String[] args) {
+
+    NazwyMetod nazwyMetod = new NazwyMetod();
+    nazwyMetod.dodaj();
+    nazwyMetod.dodaj(1);
+    nazwyMetod.dodaj("Hello");
+    nazwyMetod.dodaj(1, 5);
+    nazwyMetod.dodaj(1, 5, 2);
+}
+}
