@@ -1,0 +1,65 @@
+package org.example;
+
+public class Osoba {
+
+    public String name;
+    public int wiek;
+
+    public void eat() {
+        System.out.println("Lubie jeść piccę");
+    }
+    public void spacer() {
+        System.out.println("Lubie spacerować");
+    }
+}
+
+package org.example;
+
+public class Nauczyciel extends Osoba {
+
+    public String school;
+    public void nauczam() {
+
+        System.out.println("Lubię uczyć piłkarzy");
+    }
+
+    public void przedstawSie() {
+        System.out.println("Hello, nazywam się "+ name);
+        System.out.println(" Hi, mam " + wiek + " lat");
+    }
+}
+
+package org.example;
+
+public class Pilkarz extends Osoba {
+
+    public String footballClub;
+    public void playFootball() {
+        System.out.println("Gram w football w " + footballClub + " " + wiek);
+    }
+}
+
+package org.example;
+
+public class OsobaTest {
+    public static void main(String[] args) {
+        Nauczyciel nauczyciel = new Nauczyciel();
+        nauczyciel.name = "Monika";
+        nauczyciel.wiek = 43;
+        nauczyciel.school = "WSB";
+        nauczyciel.spacer();
+        nauczyciel.eat();
+        nauczyciel.nauczam();
+        nauczyciel.przedstawSie();
+
+        Pilkarz pilkarz = new Pilkarz();
+        pilkarz.name = "Marian";
+        pilkarz.wiek = 19;
+        pilkarz.footballClub = "Milano";
+        //pilkarz.school = "MWB";
+        pilkarz.playFootball();
+        pilkarz.eat();
+        pilkarz.spacer();
+
+    }
+}
