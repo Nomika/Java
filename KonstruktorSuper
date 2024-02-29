@@ -1,0 +1,79 @@
+package org.example;
+
+public class Osoba {
+
+    public String name;
+    public int wiek;
+
+    public Osoba(String name, int wiek){
+        System.out.println("Jestem w konstruktorze Person");
+        this.name = name;
+        this.wiek = wiek;
+    }
+
+    public void eat() {
+        System.out.println("Lubie jeść piccę");
+    }
+    public void spacer() {
+        System.out.println("Lubie spacerować");
+    }
+}
+
+package org.example;
+
+public class Pilkarz extends Osoba {
+
+    public String footballClub;
+
+    public Pilkarz(String name, int wiek, String footballClub) {
+        super(name, wiek);
+        System.out.println("Jestem w konstruktorze Pilkarz");
+        this.footballClub = footballClub;
+    }
+
+
+    public void playFootball() {
+        System.out.println("Gram w football w " + footballClub + " " + wiek);
+    }
+}
+
+package org.example;
+
+public class Nauczyciel extends Osoba {
+
+    public String school;
+
+    public Nauczyciel(String name, int wiek, String school) {
+        super(name, wiek);
+        System.out.println("Jestem w konstruktorze Nauczyciel");
+        this.school = school;
+    }
+
+    public void nauczam() {
+
+        System.out.println("Lubię uczyć piłkarzy");
+    }
+
+    public void przedstawSie() {
+        System.out.println("Hello, nazywam się "+ name);
+        System.out.println(" Hi, mam " + wiek + " lat");
+    }
+}
+
+package org.example;
+
+public class OsobaTest {
+    public static void main(String[] args) {
+        Nauczyciel nauczyciel = new Nauczyciel("Marcin", 87, "MWB UG i GUMed");
+        nauczyciel.spacer();
+        nauczyciel.eat();
+        nauczyciel.nauczam();
+        nauczyciel.przedstawSie();
+
+        Pilkarz pilkarz = new Pilkarz("Mariana", 56, "Lechia");
+        pilkarz.playFootball();
+        pilkarz.eat();
+        pilkarz.spacer();
+
+    }
+}
