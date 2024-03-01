@@ -1,0 +1,12 @@
+package org.example.com.testeroprogramowania.app;
+
+import org.example.com.testeroprogramowania.app.database.databaseConnection;
+import org.example.com.testeroprogramowania.app.database.databaseUlits;
+
+public class App {
+    public static void main(String[] args) {
+        databaseConnection databaseConnection = new databaseConnection();
+        databaseUlits databaseUlits = new databaseUlits();
+        
+        }
+    }
