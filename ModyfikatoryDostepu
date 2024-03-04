@@ -1,0 +1,120 @@
+package org.example.com.testeroprogramowania.app.modyfikatoryDostepu.pierwsza;
+
+public class Rodzic {
+
+    public String pierwszy = "Public";
+    String drugi = "Default";
+    protected String trzeci = "Protected";
+    private String czwarty = "Private";
+
+    public void metodaPierwsza() {
+        System.out.println("Pierwsza");
+    }
+    void metodaDruga() {
+        System.out.println("Default");
+    }
+    protected void metodaTrzecia() {
+        System.out.println("Protected");
+    }
+    private void metodaCzwarta() {
+        System.out.println("Prywatna");
+    }
+    public void test() {
+        System.out.println(pierwszy);
+        System.out.println(drugi);
+        System.out.println(trzeci);
+        System.out.println(czwarty);
+        metodaPierwsza();
+        metodaDruga();
+        metodaTrzecia();
+        metodaCzwarta();
+
+    }
+    }
+
+package org.example.com.testeroprogramowania.app.modyfikatoryDostepu.pierwsza;
+
+public class Dziecko extends Rodzic{
+    public void test() {
+        System.out.println(pierwszy);
+        System.out.println(drugi);
+        System.out.println(trzeci);
+       // System.out.println(czwarty);
+        metodaPierwsza();
+        metodaDruga();
+        metodaTrzecia();
+       // metodaCzwarta();
+}
+
+package org.example.com.testeroprogramowania.app.modyfikatoryDostepu.pierwsza;
+
+public class KlasaNieDziecko {
+        public void test() {
+        Rodzic rodzic = new Rodzic();
+
+        System.out.println(rodzic.pierwszy);
+        System.out.println(rodzic.drugi);
+        System.out.println(rodzic.trzeci);
+        System.out.println(rodzic.czwarty);
+        rodzic.metodaPierwsza();
+        rodzic.metodaDruga();
+        rodzic.metodaTrzecia();
+        rodzic.metodaCzwarta();
+
+    }
+}
+
+package org.example.com.testeroprogramowania.app.modyfikatoryDostepu.pierwsza;
+
+public class KlasaNieDziecko {
+        public void test() {
+        Rodzic rodzic = new Rodzic();
+
+        System.out.println(rodzic.pierwszy);
+        System.out.println(rodzic.drugi);
+        System.out.println(rodzic.trzeci);
+        System.out.println(rodzic.czwarty);
+        rodzic.metodaPierwsza();
+        rodzic.metodaDruga();
+        rodzic.metodaTrzecia();
+        rodzic.metodaCzwarta();
+
+    }
+}
+
+package org.example.com.testeroprogramowania.app.modyfikatoryDostepu.druga;
+
+import org.example.com.testeroprogramowania.app.modyfikatoryDostepu.pierwsza.Rodzic;
+
+public class klasaNieDziecko extends Rodzic {
+            public void test() {
+            Rodzic rodzic = new Rodzic();
+
+            System.out.println(rodzic.pierwszy);
+           // System.out.println(rodzic.drugi);
+           // System.out.println(rodzic.trzeci);
+          //  System.out.println(rodzic.czwarty);
+            rodzic.metodaPierwsza();
+           // rodzic.metodaDruga();
+           // rodzic.metodaTrzecia();
+           // rodzic.metodaCzwarta();
+
+        }
+    }
+
+package org.example.com.testeroprogramowania.app.modyfikatoryDostepu.druga;
+
+import org.example.com.testeroprogramowania.app.modyfikatoryDostepu.pierwsza.Rodzic;
+
+public class dziecko extends Rodzic  {
+        public void test() {
+        System.out.println(pierwszy);
+     //   System.out.println(drugi);
+        System.out.println(trzeci);
+    //    System.out.println(czwarty);
+    metodaPierwsza();
+  //  metodaDruga();
+    metodaTrzecia();
+  //  metodaCzwarta();
+}
+}
