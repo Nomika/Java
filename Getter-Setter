@@ -1,0 +1,14 @@
+package org.example;
+
+public class TylkoDoOdczytu {
+    
+    public String name = "Monika";
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
