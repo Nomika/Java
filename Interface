@@ -1,0 +1,53 @@
+package org.example;
+
+public interface Pojazd {
+    void jazda(int speed);
+    void stop();
+    String info();
+
+}
+
+package org.example;
+
+public class Rower implements Pojazd {
+
+    @Override
+    public void jazda(int speed) {
+        System.out.println("Jade rowerem słońce świeci z prędkością" + speed);
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Zatrzymaj się!");
+    }
+
+    @Override
+    public String info() {
+        return "Rower";
+    }
+
+    public void zatankuj() {
+        System.out.println("Musisz zatankować");
+    }
+}
+
+package org.example;
+
+public class Ciezarowka implements Pojazd {
+
+    @Override
+    public void jazda(int speed) {
+        System.out.println("Jadę ciężarówką z prędkością" + speed);
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Stań, bo czas na luhch");
+    }
+
+    @Override
+    public String info() {
+        return "Ciężarówka";
+    }
+
+}
