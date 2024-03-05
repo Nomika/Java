@@ -1,0 +1,36 @@
+package org.example;
+
+public interface Zamowienie {
+    String info();
+    void wyslij();
+
+}
+
+package org.example;
+
+public class SalatkaCesarska implements Zamowienie {
+
+    @Override
+    public void wyslij() {
+        System.out.println("Wyślij do zapłaty");
+    }
+
+    @Override
+    public String info() {
+        return "SalatkaCesarska";
+    }
+}
+
+package org.example;
+
+public class Kotlet implements Zamowienie {
+    @Override
+    public String info() {
+        return "Kotlet";
+    }
+
+    @Override
+    public void wyslij() {
+        System.out.println("Wyślij zamówienie do opłacenia");
+    }
+}
