@@ -34,3 +34,19 @@ public class Kotlet implements Zamowienie {
         System.out.println("Wyślij zamówienie do opłacenia");
     }
 }
+
+package org.example;
+
+public class ZamowienieTest {
+    public static void main(String[] args) {
+
+        SalatkaCesarska salatkaCesarska = new SalatkaCesarska();
+        salatkaCesarska.wyslij();
+        salatkaCesarska.info();
+
+        Kotlet kotlet = new Kotlet();
+        kotlet.info();
+        kotlet.wyslij();
+
+    }
+}
