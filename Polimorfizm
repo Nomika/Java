@@ -1,0 +1,44 @@
+package org.example.document;
+
+public class Document {
+    public void getOpis() {
+        System.out.println("Jestem opisem metody Document");
+    }
+
+}
+
+package org.example.document;
+
+public class excelDocument extends Document {
+    public void getOpis() {
+        System.out.println("Jestem dokument excel");
+    }
+}
+
+package org.example.document;
+
+public class pdfDocument extends Document{
+    public void getOpis() {
+        System.out.println("Jestem pdf Dokument");
+    }
+
+}
+
+package org.example.document;
+
+public class DocumentTest {
+    public static void main(String[] args) {
+        //pdfDocument pdfDocument = new pdfDocument();
+        Document pdfDocument = new pdfDocument();
+
+
+        excelDocument excelDocument = new excelDocument();
+        Document excel = new excelDocument();
+
+        pdfDocument.getOpis();
+        excel.getOpis();
+
+
+
+    }
+}
