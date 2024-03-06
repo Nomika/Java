@@ -1,0 +1,19 @@
+package org.example.Pliki;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.SortedMap;
+
+public class StworzPlik {
+    public static void main(String[] args) throws IOException {
+
+
+    File plik = new File("test.txt");
+    if(plik.createNewFile()) {
+        System.out.println("Stworzyłem nowy Plik");
+    }
+    else {
+        System.out.println("Plik już istnieje");
+    }
+    }
+}
