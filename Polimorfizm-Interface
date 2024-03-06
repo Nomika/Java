@@ -1,0 +1,40 @@
+package org.example.docts;
+
+public interface Dokument {
+    void getOpis();
+}
+
+package org.example.docts;
+
+public class excelDokument implements Dokument {
+
+    @Override
+    public void getOpis() {
+        System.out.println("Jestem dokumentem excel");
+    }
+}
+
+package org.example.docts;
+
+public class pdfDokument implements Dokument {
+    @Override
+    public void getOpis() {
+        System.out.println("Jestem dokumentem PDF");
+    }
+}
+
+package org.example.docts;
+
+public class DokumentTest {
+    public static void main(String[] args) {
+        excelDokument excelDokument = new excelDokument();
+
+        Dokument pdfDokument = new pdfDokument();
+
+        pdfDokument.getOpis();
+        excelDokument.getOpis();
+
+        Dokument doc = new excelDokument();
+        doc.getOpis();
+    }
+}
