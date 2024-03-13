@@ -1,0 +1,86 @@
+package org.example.Drivers;
+
+import org.jetbrains.annotations.NotNull;
+
+public class WebDriverTest {
+    public static void main(String[] args) {
+
+        WebDriver driver = getDriver("safari");
+        driver.get();
+        driver.findElementBy();
+        driver.findElementBy();
+
+    }
+
+    private static WebDriver getDriver(String name) {
+        if (name.equals("chrome")) {
+            return new ChromeDriver();
+        } else if (name.equals("firefox")) {
+            return new FirefoxDriver();
+        }
+        else if(name.equals("safari")) {
+            return new SafariDriver();
+        }
+        return null;
+    }
+}
+
+package org.example.Drivers;
+
+public interface WebDriver {
+
+    void get();
+    void findElementBy();
+}
+
+package org.example.Drivers;
+
+public class SafariDriver implements WebDriver {
+
+
+        @Override
+        public void get() {
+            System.out.println("Otwieram przeglądarkę Safari");
+        }
+
+        @Override
+        public void findElementBy() {
+            System.out.println("Safari działa jak trzeba");
+        }
+}
+
+package org.example.Drivers;
+
+public class FirefoxDriver implements WebDriver {
+    @Override
+    public void get() {
+        System.out.println("Otwieram przeglądarkę firefox");
+    }
+
+    @Override
+    public void findElementBy() {
+        System.out.println("Znalazłem element na stronie w firefox");
+    }
+}
+
+package org.example.Drivers;
+
+public class ChromeDriver implements WebDriver {
+    @Override
+    public void get() {
+        System.out.println("Otwieram przeglądarkę chrome");
+    }
+
+    @Override
+    public void findElementBy() {
+        System.out.println("Znajduję element w przeglądarce chrome");
+    }
+}
+
+
+
+
+
+
+
+
