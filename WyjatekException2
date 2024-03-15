@@ -1,0 +1,25 @@
+package org.example;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class ObslugaWyjatkow {
+
+    public static void main(String[] args) {
+        try {
+            System.out.println("Before reading File");
+            readFiles("C:/Users/.pdf");
+                   }
+        catch (FileNotFoundException e) {
+            System.out.println("Wyjatek wyrzucony :)");
+            System.out.println(e.getMessage());
+        }
+        finally {
+            System.out.println("After reading File. Close file");
+        }
+    }
+    public static void readFiles(String path) throws FileNotFoundException {
+        FileInputStream fileInputStream = new FileInputStream(path);
+
+    }
+}
