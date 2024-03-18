@@ -1,0 +1,47 @@
+
+package org.example.Drivers;
+
+import org.example.Wyjatki;
+
+public class NoValidBrowserName extends Exception {
+    public NoValidBrowserName(String message) {
+        super(message);
+    }
+}
+
+
+package org.example.Drivers;
+
+import org.example.Drivers.*;
+import org.jetbrains.annotations.NotNull;
+
+public class WebDriverTest1Wyjatki {
+
+
+
+        public static void main(String[] args) {
+
+            WebDriver driver = getDriver("safarii");
+            driver.get();
+            driver.findElementBy();
+            driver.findElementBy();
+
+        }
+
+        private static WebDriver getDriver(String name) {
+            if (name.equals("chrome")) {
+                return new ChromeDriver();
+            } else if (name.equals("firefox")) {
+                return new FirefoxDriver();
+            }
+            else if(name.equals("safari")) {
+                return new SafariDriver();
+            }
+            try {
+                throw new NoValidBrowserName("No Valid browser Name");
+            } catch (NoValidBrowserName e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
