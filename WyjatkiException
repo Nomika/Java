@@ -1,0 +1,43 @@
+package org.example.Age;
+
+public class NotValidAge extends RuntimeException {
+    public NotValidAge(String message) {
+        super(message);
+    }
+}
+
+
+package org.example.Age;
+import java.util.Scanner;
+
+public class AgeTest {
+    public static void main(String[] args) {
+        Scanner skaner = new Scanner(System.in);
+        System.out.println("Podaj liczbę");
+        int jedna = skaner.nextInt();
+        System.out.println(jedna);
+        if (jedna <= 0) {
+            throw new NotValidAge("Wpisałeś błędną liczbę");
+        }
+        else if (jedna < 18) {
+            System.out.println("Nie jesteś pełnoletni");
+        }
+        else {
+            System.out.println("Jesteś pełnoletni zapraszam na stronę");
+        }
+//        try {
+//            throw new NotValidAge("Jakieś info o walidacji, to Wyjątek");
+//        } catch (NotValidAge e) {
+//            throw new RuntimeException(e);
+//        }
+
+    }
+
+}
+
+
+
+
+
+
+
