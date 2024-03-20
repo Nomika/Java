@@ -1,0 +1,30 @@
+package org.example.Drivers;
+
+public enum DriverTypesEnum2 {
+    Chrome("Chrome", "/src/resources/chromedriver.exe"),
+    Firefox("Firefox", "/src/resources/firefoxdriver.exe");
+
+    String name;
+
+    String path;
+
+    DriverTypesEnum2(String name, String path) {
+        this.name = name;
+        this.path = path;
+    }
+}
+
+package org.example.Drivers;
+
+public class WebDriverTestEnum2 {
+
+        public static void main(String[] args) {
+
+            DriverTypesEnum2[] driverTypesEnum2s = DriverTypesEnum2.values();
+
+            for(int i = 0; i < driverTypesEnum2s.length; i++){
+                System.out.println(driverTypesEnum2s[i].name);
+                System.out.println(driverTypesEnum2s[i].path);
+            }
+}
+}
