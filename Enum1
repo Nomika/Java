@@ -1,0 +1,51 @@
+package org.example.Drivers;
+
+public enum DriverTypesEnum1 {
+    Chrome,
+    Firefox
+
+//  Safari,
+
+}
+
+package org.example.Drivers;
+
+public class WebDriverTestEnum1 {
+
+        public static void main(String[] args) {
+
+            WebDriver driver = getDriver(DriverTypesEnum1.Firefox);
+            driver.get();
+            driver.findElementBy();
+            driver.findElementBy();
+
+        }
+
+        private static WebDriver getDriver(DriverTypesEnum1 type) {
+            if (type== DriverTypesEnum1.Chrome) {
+                return new ChromeDriver();
+            } else if (type== DriverTypesEnum1.Firefox) {
+                return new FirefoxDriver();
+            }
+//            else if(type.equals("safari")) {
+//                return new SafariDriver();
+//            }
+//            throw new NoValidBrowserName("Validacja się nie powiodła");
+            return null;
+        }
+    }
+//    FirefoxDriver fire = new FirefoxDriver();
+//    fire.get();
+//    fire.findElementBy();
+//    fire.findElementBy();
+//    fire.findElementBy();
+//    fire.findElementBy();
+
+
+
+
+
+
+
+
+
