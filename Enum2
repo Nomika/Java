@@ -1,0 +1,52 @@
+package org.example.Drivers;
+
+public enum DriverTypesEnum2 {
+    Chrome("Chrome", "/src/resources/chromedriver.exe"),
+    Firefox("Firefox", "/src/resources/firefoxdriver.exe");
+
+    String name;
+
+    String path;
+
+    DriverTypesEnum2(String name, String path) {
+        this.name = name;
+        this.path = path;
+    }
+}
+
+
+package org.example.Drivers;
+
+public class WebDriverTestEnum2 {
+
+        public static void main(String[] args) {
+
+            WebDriver driver = getDriver(DriverTypesEnum2.Firefox);
+            driver.get();
+            driver.findElementBy();
+            driver.findElementBy();
+
+        }
+
+        private static WebDriver getDriver(DriverTypesEnum2 type) {
+            if (type.name.equals("Chrome")) {
+                System.out.println(type.path);
+                return new ChromeDriver();
+            } else if (type.name.equals("Firefox")) {
+                System.out.println(type.path);
+                return new FirefoxDriver();
+            }
+
+            return null;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
