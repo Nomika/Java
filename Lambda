@@ -1,0 +1,45 @@
+package org.example.Lambda;
+
+@FunctionalInterface
+public interface Student {
+    void sayHello(String name);
+}
+//MOŻLIWA TYLKO JEDNA METODA!!!
+
+
+package org.example.Lambda;
+
+public class ItStudent implements Student {
+    @Override
+    public void sayHello(String name) {
+        System.out.println(" Jestem studentką");
+        System.out.println("Nazywam się " + name);
+    }
+}
+
+
+package org.example.Lambda;
+
+public class StudentTest {
+
+    public static void main(String[] args) {
+        Student it = new ItStudent();
+        sayHello("Monika", it);
+
+        Student med = new Student() {
+            @Override
+            public void sayHello(String name) {
+                System.out.println("Będę doktorem");
+                System.out.println("Nazywam się " + name);
+            }
+        };
+
+        sayHello("Karol", med);
+    }
+            public static void sayHello(String name, Student student) {
+                student.sayHello(name);
+
+        }
+    }
+
+
