@@ -1,0 +1,58 @@
+package org.example.Lambda;
+
+@FunctionalInterface
+public interface Student {
+    boolean sayHello(String name, int age);
+}
+//MOŻLIWA TYLKO JEDNA METODA!!!
+
+package org.example.Lambda;
+
+public class ItStudent implements Student {
+    @Override
+    public boolean sayHello(String name, int age) {
+        System.out.println(" Jestem studentką");
+        System.out.println("Nazywam się " + name + "Mam " + age + "lat.");
+        return true;
+    }
+}
+
+
+package org.example.Lambda;
+
+public class StudentTest {
+
+    public static void main(String[] args) {
+        Student it = new ItStudent();
+        sayHello("Monika", it, 21);
+
+        Student med = new Student() {
+            @Override
+            public boolean sayHello(String name, int age) {
+                System.out.println("Będę doktorem");
+                System.out.println("Nazywam się " + name + " Mam " + age + "lat.");
+                return true;
+            }
+        };
+
+        sayHello("Karol", med, 31);
+
+        //<parametr> -> System.out.printpn("Nie jestem studentem, nazywam się" + name);
+        Student noStudent = (name, age) -> {
+            System.out.println("Nie jestem studentem, nazywam się " + name + " Mam " + age + "lat.");
+            if (age >= 18) {
+                System.out.println("Jestem dorosły, mogę studiować");
+            }
+
+        return false;
+    };
+
+        sayHello("Konrad", noStudent,25);
+    }
+            public static void sayHello(String name, Student student, int age) {
+                student.sayHello(name, age);
+
+        }
+    }
+
+
