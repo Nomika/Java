@@ -1,0 +1,44 @@
+package org.example.HashMapa;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.SortedMap;
+
+public class HashMapaTest {
+    public static void main(String[] args) {
+        Map<Integer, String> studenci = new HashMap<>();
+        studenci.put(1, "Maniek");
+        studenci.put(2, "Kostek");
+        studenci.put(3, "Franek");
+
+//        System.out.println(studenci.get(1));
+
+        Map<Integer, String> absolwenci = new HashMap<>();
+//        absolwenci.put(1, "Aga");
+//        absolwenci.put(2, "Olek");
+        absolwenci.putAll(studenci);
+
+//        System.out.println(absolwenci);
+//        System.out.println(absolwenci.get(2));
+
+//        System.out.println(studenci.containsKey(1));
+//        System.out.println(absolwenci.containsValue("Kostek"));
+
+        System.out.println(absolwenci.isEmpty());
+        System.out.println(studenci.size());
+
+        studenci.remove(1);
+        System.out.println(studenci);
+        System.out.println(studenci.size());
+        System.out.println(absolwenci.size());
+
+        studenci.put(1, "Ania");
+        System.out.println(studenci.get(1));
+        System.out.println(studenci);
+
+        for(Integer klucz : studenci.keySet()){
+            System.out.println(klucz);
+            System.out.println(studenci.get(klucz));
+        }
+    }
+}
