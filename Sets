@@ -1,0 +1,42 @@
+package org.example.SET;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetTest {
+    public static void main(String[] args) {
+        Set<String> warzywa = new HashSet<>();
+
+        warzywa.add("marchew");
+        warzywa.add("ziemniak");
+        warzywa.add("ziemniak");
+        warzywa.add("seler");
+
+        System.out.println(warzywa.contains("marchew"));
+      //  System.out.println(owoce.containsAll(<String>));
+        System.out.println(warzywa.size());
+        System.out.println(warzywa.isEmpty());
+        System.out.println();
+
+        Set<String> owoce = new HashSet<>();
+
+        owoce.add("Jabłko");
+        owoce.add("pomarańcza");
+        owoce.add("pomarańcza");
+        owoce.add("jagoda");
+
+        owoce.addAll(warzywa);
+
+        System.out.println(owoce.contains("Jabłko"));
+        //  System.out.println(owoce.containsAll(<String>));
+        System.out.println(owoce.size());
+        System.out.println(owoce.isEmpty());
+        System.out.println(owoce);
+
+        for(String owoce1: owoce) {
+            System.out.println(owoce1);
+        }
+
+
+    }
+}
